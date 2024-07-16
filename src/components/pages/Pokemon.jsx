@@ -72,7 +72,7 @@ const Pokemon = () => {
                     <h3 className="text-xl mb-2 font-semibold">Experiencia Base:</h3>
                     <p>{pokemon.base_experience}</p>
                 </div>
-                {token() && ( // Mostrar la sección de captura solo si hay token
+                {token() && (
                     <div className="mt-4">
                         <h3 className="text-xl mb-2 font-semibold">Estado de captura:</h3>
                         {captured ? (
