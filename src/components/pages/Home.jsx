@@ -1,22 +1,19 @@
-import { useState } from "react";
+import  { useContext } from "react";
 import useFetch from "../../hooks/useFetch";
 import Loader from "../atoms/Loader";
 import PokemonCard from "../molecules/PokemonCard";
+import { PaginationContext } from "../../context/PaginationContext"; 
 
 const Home = () => {
-    const [page, setPage] = useState(1);
-    const limit = 20; // Número de resultados por página
-
-    const { data, error, loading } = useFetch( page, limit);
+    const { state: { page, limit }, dispatch } = useContext(PaginationContext);
+    const { data, error, loading } = useFetch(page, limit);
 
     const handleNextPage = () => {
-        setPage(page + 1);
+        dispatch({ type: 'NEXT_PAGE' }); 
     };
 
     const handlePrevPage = () => {
-        if (page > 1) {
-            setPage(page - 1);
-        }
+        dispatch({ type: 'PREV_PAGE' });
     };
 
     if (loading) return <Loader />;
