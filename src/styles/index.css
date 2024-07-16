@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* permite crear clases personalizadas */
+.bg-gradient {
+    background: linear-gradient(to right, #43cea2, #185a9d);
+}
+
+.menu-item { 
+    /* le aplica a las clases repetitivas con el decorador apply */
+    @apply py-5 px-4 hover:text-sky-100; 
+}
