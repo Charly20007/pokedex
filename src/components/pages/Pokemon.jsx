@@ -8,7 +8,7 @@ const Pokemon = () => {
     const { id } = useParams();
     const [pokemon, setPokemon] = useState(null);
     const [loading, setLoading] = useState(true);
-    const [captured, setCaptured] = useState(false); // Nuevo estado para capturado
+    const [captured, setCaptured] = useState(false); 
 
 
     useEffect(() => {
@@ -26,10 +26,8 @@ const Pokemon = () => {
     }, [id]);
 
     useEffect(() => {
-        // Verificar si el Pokémon está capturado (simulado con el token aquí)
         if (token()) {
-            // Aquí podrías agregar lógica para verificar si el Pokémon está en la lista de capturados del usuario
-            setCaptured(true); // Por ahora lo marcamos como capturado si hay un token
+            setCaptured(true); //  capturado si hay un token
         } else {
             setCaptured(false);
         }

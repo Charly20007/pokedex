@@ -15,12 +15,10 @@ const Login = () => {
             password: e.target.password.value
         };
 
-        // Credenciales hardcodeadas
         const hardcodedEmail = "usuario@gmail.com";
         const hardcodedPassword = "123abc";
 
         if (data.email === hardcodedEmail && data.password === hardcodedPassword) {
-            // Simulamos la obtención de un token
             const fakeToken = "fake-jwt-token";
             setToken(fakeToken);
             nav("/");

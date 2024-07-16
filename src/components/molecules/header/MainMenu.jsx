@@ -39,7 +39,7 @@ const MainMenu = () => {
                     <li className="flex items-center ml-2 text-sm text-red-400">
                         Desconectado
                     </li>
-                    )}
+                )}
             </ul>
         </nav>
     );
